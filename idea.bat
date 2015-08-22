@@ -1,2 +1,2 @@
-@echo off
-gradlew.bat idea
+@
+gradlew.bat idea genIntellijRuns

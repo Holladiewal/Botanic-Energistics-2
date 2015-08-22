@@ -4,19 +4,25 @@ import appeng.api.networking.crafting.ICraftingMedium;
 import appeng.api.networking.crafting.ICraftingPatternDetails;
 import appeng.api.networking.crafting.ICraftingProviderHelper;
 import appeng.api.storage.data.IAEItemStack;
+import appeng.tile.TileEvent;
+import appeng.tile.events.TileEventType;
 import appeng.tile.grid.AENetworkTile;
+import com.beepbeat.AE2BotaniaCrossOver.Items.RuneAssemblerCraftingPattern;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.IInventory;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import vazkii.botania.api.BotaniaAPI;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
 public class TileAERuneAssembler extends AENetworkTile implements ICraftingProviderHelper, IInventory {
     List RuneAltarRecipes = BotaniaAPI.runeAltarRecipes;
     private ItemStack[] inventory = new ItemStack[9];
+    List availRecipes = new ArrayList();
 
 
     public TileAERuneAssembler() {
@@ -37,8 +43,19 @@ public class TileAERuneAssembler extends AENetworkTile implements ICraftingProvi
 
     }
 
+    @TileEvent(TileEventType.TICK)
+    public void onTick(){
+        availRecipes.clear();
+        for (ItemStack stack : inventory){
+            if (stack.getItem() instanceof RuneAssemblerCraftingPattern){
+                RuneAssemblerCraftingPattern pattern = (RuneAssemblerCraftingPattern) stack.getItem();
+                if (pattern.getOutputs() != null)
+                availRecipes.add(pattern.getOutputs()[0].getItemStack());
+            }
+        }
+    }
 
-    //IInventory
+    //region IInventory
     /**
      * Returns the number of slots in the inventory.
      */
@@ -175,4 +192,5 @@ public class TileAERuneAssembler extends AENetworkTile implements ICraftingProvi
     public boolean isItemValidForSlot(int slot, ItemStack stack) {
         return true;
     }
+    //endregion
 }
