@@ -13,6 +13,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
+import pct.botanic.energistics.Blocks.tile.TileAERuneAssembler;
 
 
 public class AERuneAssembler extends BlockContainer {
