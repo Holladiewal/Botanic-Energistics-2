@@ -1,4 +1,4 @@
-package pct.botanic.energistics.Blocks;
+package pct.botanic.energistics.tile;
 
 import appeng.api.networking.crafting.ICraftingMedium;
 import appeng.api.networking.crafting.ICraftingPatternDetails;

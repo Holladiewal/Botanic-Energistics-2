@@ -1,11 +1,10 @@
 package pct.botanic.energistics.GUI.Container;
 
-import pct.botanic.energistics.Blocks.TileAERuneAssembler;
+import pct.botanic.energistics.tile.TileAERuneAssembler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
-import pct.botanic.energistics.GUI.Container.ContainerCrossoverMod;
 
 /**
  * Created by beepbeat on 22.08.2015.

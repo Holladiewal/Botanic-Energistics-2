@@ -7,7 +7,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import pct.botanic.energistics.Blocks.AERuneAssembler;
-import pct.botanic.energistics.Blocks.TileAERuneAssembler;
+import pct.botanic.energistics.tile.TileAERuneAssembler;
 import pct.botanic.energistics.Items.RuneAssemblerCraftingPattern;
 import pct.botanic.energistics.references.CoreRefs;
 

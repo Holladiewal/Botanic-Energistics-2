@@ -1,6 +1,6 @@
 package pct.botanic.energistics.GUI;
 
-import pct.botanic.energistics.Blocks.TileAERuneAssembler;
+import pct.botanic.energistics.tile.TileAERuneAssembler;
 import pct.botanic.energistics.GUI.Container.ContainerRuneAssembler;
 import cpw.mods.fml.common.network.IGuiHandler;
 import net.minecraft.entity.player.EntityPlayer;
