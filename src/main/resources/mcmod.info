@@ -1,14 +1,14 @@
 [
 {
-  "modid": "botaniaenergistics",
-  "name": "Botania-Energistics",
-  "description": "A mod that makes it so you can store mana inside of AE and create stuff with AE for Botania.",
+  "modid": "examplemod",
+  "name": "Example Mod",
+  "description": "Example placeholder mod.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ParadoxCodersTeam"],
-  "credits": "",
+  "authorList": ["ExampleDude"],
+  "credits": "The Forge and FML guys, for making this example",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
