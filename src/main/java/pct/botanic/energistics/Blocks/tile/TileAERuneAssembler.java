@@ -2,26 +2,32 @@ package pct.botanic.energistics.Blocks.tile;
 
 import appeng.api.networking.crafting.ICraftingMedium;
 import appeng.api.networking.crafting.ICraftingPatternDetails;
+import appeng.api.networking.crafting.ICraftingProvider;
 import appeng.api.networking.crafting.ICraftingProviderHelper;
 import appeng.api.storage.data.IAEItemStack;
 import appeng.tile.TileEvent;
 import appeng.tile.events.TileEventType;
 import appeng.tile.grid.AENetworkTile;
+import net.minecraft.inventory.InventoryCrafting;
 import pct.botanic.energistics.Items.RuneAssemblerCraftingPattern;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import vazkii.botania.api.BotaniaAPI;
+import vazkii.botania.api.mana.IManaPool;
+import vazkii.botania.api.mana.IManaReceiver;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class TileAERuneAssembler extends AENetworkTile implements ICraftingProviderHelper, IInventory {
+public class TileAERuneAssembler extends AENetworkTile implements ICraftingProvider, IInventory,IManaReceiver, IManaPool {
     List RuneAltarRecipes = BotaniaAPI.runeAltarRecipes;
-    private ItemStack[] inventory = new ItemStack[9];
+    private ItemStack[] inventory = new ItemStack[10];
     List availRecipes = new ArrayList();
+    private int currentMana;
+    private int maxMana;
 
 
     public TileAERuneAssembler() {
@@ -32,21 +38,12 @@ public class TileAERuneAssembler extends AENetworkTile implements ICraftingProvi
 
     }
 
-    @Override
-    public void addCraftingOption(ICraftingMedium iCraftingMedium, ICraftingPatternDetails iCraftingPatternDetails) {
-
-    }
-
-    @Override
-    public void setEmitable(IAEItemStack iaeItemStack) {
-
-    }
 
     @TileEvent(TileEventType.TICK)
     public void onTick(){
         availRecipes.clear();
         for (ItemStack stack : inventory){
-            if (stack.getItem() instanceof RuneAssemblerCraftingPattern){
+            if (stack != null && stack.getItem() instanceof RuneAssemblerCraftingPattern){
                 RuneAssemblerCraftingPattern pattern = (RuneAssemblerCraftingPattern) stack.getItem();
                 if (pattern.getOutputs() != null)
                 availRecipes.add(pattern.getOutputs()[0].getItemStack());
@@ -192,4 +189,47 @@ public class TileAERuneAssembler extends AENetworkTile implements ICraftingProvi
         return true;
     }
     //endregion
+    @Override
+    public void provideCrafting(ICraftingProviderHelper iCraftingProviderHelper) {
+
+    }
+
+    @Override
+    public boolean pushPattern(ICraftingPatternDetails iCraftingPatternDetails, InventoryCrafting inventoryCrafting) {
+        return false;
+    }
+
+    @Override
+    public boolean isBusy() {
+        return false;
+    }
+
+
+
+    @Override
+    public boolean isFull() {
+        //return currentMana == maxMana;
+        return false;
+    }
+
+    @Override
+    public void recieveMana(int i) {
+        currentMana += i < (maxMana - currentMana) ? i : (maxMana - currentMana);
+    }
+
+    @Override
+    public boolean canRecieveManaFromBursts() {
+        return true;
+    }
+
+    @Override
+    public int getCurrentMana() {
+        return currentMana;
+    }
+
+    @Override
+    public boolean isOutputtingPower() {
+        return true;
+    }
+
 }

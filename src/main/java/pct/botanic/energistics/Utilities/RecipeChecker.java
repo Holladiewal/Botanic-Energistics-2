@@ -16,6 +16,7 @@ public class RecipeChecker {
         List Recipes = BotaniaAPI.runeAltarRecipes;
         for (Object obj : Recipes){
             RecipeRuneAltar rec = (RecipeRuneAltar) obj;
+            if (rec == null || rec.getInputs() == null || input == null || rec.getOutput() == null | output == null) return false;
             if (rec.getInputs().containsAll(Arrays.asList(input)) && input.length == rec.getInputs().size() && rec.getOutput() == output) return true;
         }
         return false;

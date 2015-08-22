@@ -30,6 +30,8 @@ public class ContainerRuneAssembler extends ContainerCrossoverMod {
         addSlotToContainer(new Slot(te, 7, 98, 35));
         addSlotToContainer(new Slot(te, 8, 98, 17));
 
+        //output
+        addSlotToContainer(new Slot(te, 9, 132, 36));
         this.te = te;
     }
 

@@ -8,17 +8,16 @@ import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import pct.botanic.energistics.Blocks.AERuneAssembler;
 import pct.botanic.energistics.Blocks.tile.TileAERuneAssembler;
+import pct.botanic.energistics.Items.PatternATMPT2;
 import pct.botanic.energistics.Items.RuneAssemblerCraftingPattern;
 import pct.botanic.energistics.references.CoreRefs;
 
-/**
- * Created by magnus97 on 22/08/2015.
- */
+
 @Mod(modid = CoreRefs.MODID, name = CoreRefs.NAME,version = CoreRefs.VERSIONS,dependencies = CoreRefs.DEPENDENCIES,acceptedMinecraftVersions = "1.7.10")
 public class BotanicEnergistics {
 
     @Mod.Instance()
-    public static AE2BotaniaCrossOver instance;
+    public static BotanicEnergistics instance;
 
     @Mod.EventHandler
     public void onPreInit(FMLPreInitializationEvent event){
