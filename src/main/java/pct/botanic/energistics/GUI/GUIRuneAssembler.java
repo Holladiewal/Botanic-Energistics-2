@@ -1,7 +1,7 @@
-package com.beepbeat.AE2BotaniaCrossOver.GUI;
+package pct.botanic.energistics.GUI;
 
-import com.beepbeat.AE2BotaniaCrossOver.Blocks.TileAERuneAssembler;
-import com.beepbeat.AE2BotaniaCrossOver.GUI.Container.ContainerRuneAssembler;
+import pct.botanic.energistics.Blocks.TileAERuneAssembler;
+import pct.botanic.energistics.GUI.Container.ContainerRuneAssembler;
 import net.minecraft.entity.player.InventoryPlayer;
 
 /**

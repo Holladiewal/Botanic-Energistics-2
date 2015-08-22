@@ -1,6 +1,5 @@
-package com.beepbeat.AE2BotaniaCrossOver.GUI;
+package pct.botanic.energistics.GUI;
 
-import com.beepbeat.AE2BotaniaCrossOver.References.Reference;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;

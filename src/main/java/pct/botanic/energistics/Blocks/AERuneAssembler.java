@@ -1,13 +1,9 @@
-package com.beepbeat.AE2BotaniaCrossOver.Blocks;
+package pct.botanic.energistics.Blocks;
 
 import appeng.api.AEApi;
 import appeng.api.networking.IGridNode;
-import appeng.block.AEBaseBlock;
-import com.beepbeat.AE2BotaniaCrossOver.AE2BotaniaCrossOver;
-import com.beepbeat.AE2BotaniaCrossOver.GUI.GUIHandler;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.block.Block;
+import pct.botanic.energistics.AE2BotaniaCrossOver;
+import pct.botanic.energistics.GUI.GUIHandler;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;

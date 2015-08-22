@@ -1,10 +1,10 @@
-package com.beepbeat.AE2BotaniaCrossOver;
+package pct.botanic.energistics;
 
-import com.beepbeat.AE2BotaniaCrossOver.Blocks.AERuneAssembler;
-import com.beepbeat.AE2BotaniaCrossOver.Blocks.TileAERuneAssembler;
-import com.beepbeat.AE2BotaniaCrossOver.GUI.GUIHandler;
-import com.beepbeat.AE2BotaniaCrossOver.Items.RuneAssemblerCraftingPattern;
-import com.beepbeat.AE2BotaniaCrossOver.References.Reference;
+import pct.botanic.energistics.AE2BotaniaCrossOver.Blocks.AERuneAssembler;
+import pct.botanic.energistics.AE2BotaniaCrossOver.Blocks.TileAERuneAssembler;
+import pct.botanic.energistics.AE2BotaniaCrossOver.GUI.GUIHandler;
+import pct.botanic.energistics.AE2BotaniaCrossOver.Items.RuneAssemblerCraftingPattern;
+import pct.botanic.energistics.AE2BotaniaCrossOver.References.Reference;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;

@@ -1,4 +1,4 @@
-package com.beepbeat.AE2BotaniaCrossOver.GUI.Container;
+package pct.botanic.energistics.GUI.Container;
 
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;

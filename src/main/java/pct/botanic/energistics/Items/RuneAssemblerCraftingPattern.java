@@ -1,10 +1,10 @@
-package com.beepbeat.AE2BotaniaCrossOver.Items;
+package pct.botanic.energistics.Items;
 
 import appeng.api.AEApi;
 import appeng.api.implementations.ICraftingPatternItem;
 import appeng.api.networking.crafting.ICraftingPatternDetails;
 import appeng.api.storage.data.IAEItemStack;
-import com.beepbeat.AE2BotaniaCrossOver.Utilities.RecipeChecker;
+import pct.botanic.energistics.Utilities.RecipeChecker;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.Item;

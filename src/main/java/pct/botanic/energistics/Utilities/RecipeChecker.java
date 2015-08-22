@@ -1,4 +1,4 @@
-package com.beepbeat.AE2BotaniaCrossOver.Utilities;
+package pct.botanic.energistics.Utilities;
 
 import net.minecraft.item.ItemStack;
 import vazkii.botania.api.BotaniaAPI;

@@ -1,4 +1,4 @@
-package com.beepbeat.AE2BotaniaCrossOver.References;
+package pct.botanic.energistics.references;
 
 /**
  * Created by beebeat on 21.08.2015.

@@ -1,4 +1,4 @@
-package com.beepbeat.AE2BotaniaCrossOver.Blocks;
+package pct.botanic.energistics.Blocks;
 
 import appeng.api.networking.crafting.ICraftingMedium;
 import appeng.api.networking.crafting.ICraftingPatternDetails;
@@ -7,11 +7,10 @@ import appeng.api.storage.data.IAEItemStack;
 import appeng.tile.TileEvent;
 import appeng.tile.events.TileEventType;
 import appeng.tile.grid.AENetworkTile;
-import com.beepbeat.AE2BotaniaCrossOver.Items.RuneAssemblerCraftingPattern;
+import pct.botanic.energistics.Items.RuneAssemblerCraftingPattern;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.IInventory;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import vazkii.botania.api.BotaniaAPI;
 
